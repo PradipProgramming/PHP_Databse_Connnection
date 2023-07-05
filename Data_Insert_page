@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>My form</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        form{
+            font-size: 20px;
+            color: brown;
+        }
+    </style>
+</head>
+<body bgcolor="">
+    <center><h1>My Form</h1>
+   <form action="regaction.php" method="post">
+    <lable>Name: <input type="text" name="l_name"></lable><br><br>
+    <lable>Contact: <input type="tel" name="l_contact"></lable><br><br>
+    <lable>Address: <input type="text" name="l_address"></lable><br><br>
+    <lable>Email: <input type="email" name="l_email"></lable><br><br>
+    <lable>Password: <input type="password" name="l_password"></lable><br><br>
+    <lable>Skill: <input type="text" name="l_skill"></lable><br><br>
+    <lable>City:</lable><select type="text" name="l_city">
+                <option>Kolkata</option>
+                <option>Mumbai</option>
+                <option>Delhi</option>
+                <option>Burdwan</option>
+                <option>UP</option>
+    </select><br><br>
+
+    <input type="radio" name="l_gender" value="male"> Male
+    <input type="radio" name="l_gender" value="female"> Female
+    <input type="radio" name="l_gender" value="other"> Other
+    <br><br>
+    <input type="submit" value="Submit">
+    <input type="reset" value="cancel">
+   </form></center>
+</body>
+</html>
