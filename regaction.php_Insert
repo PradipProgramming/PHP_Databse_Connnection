@@ -1,0 +1,30 @@
+<?php 
+  $host="localhost";
+  $user="root";
+  $password="";
+  $dbname="university";
+  $con=mysqli_connect($host,$user,$password,$dbname);
+  /*if($con)
+    echo "connected successfully";*/
+  $name=$_POST['l_name'];
+  $contact=$_POST['l_contact'];
+  $address=$_POST['l_address'];
+  $email=$_POST['l_email'];
+  $password=$_POST['l_password'];
+  $skill=$_POST['l_skill'];
+  $city=$_POST['l_city'];
+  $gender=$_POST['l_gender'];
+
+  $sql="insert into form(`l_name`, `l_contact`, `l_address`, `l_email`, `l_password`, `l_skill`, `l_city`, `l_gender`) VALUES ('$name',$contact,'$address','$email','$password','$skill','$city','$gender')";
+  $result=mysqli_query($con,$sql);
+  if($result){
+      echo "data inserted sucessfully";
+      sleep(1);
+      include_once "Display_form.php";
+      //echo "record Sucessfully Insert";
+      //header("Location: https://www.geeksforgeeks.org");
+      exit;
+  }else{
+      echo "Error:".$sql.mysqli.error($con);
+  }
+?>
